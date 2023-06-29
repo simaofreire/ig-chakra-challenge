@@ -22,8 +22,8 @@ export default function Icons() {
 
 	return (
 		<>
-			{iconData.map(({ icon, text }) => (
-				<GridItem w="100%" key={text}>
+			{iconData.map(({ icon, text }, index) => (
+				<GridItem key={text} colSpan={index === iconData.length - 1 ? [2, 2, 2, 1] : 1}>
 					<Flex direction={['row', 'column']} align="center" justify="center">
 						{isMobile ? (
 							<Image src={icon} alt={text} w="85px" h="85px" mb="6" />

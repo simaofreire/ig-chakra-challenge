@@ -7,7 +7,7 @@ export default function Menu() {
 			gridTemplateColumns={['1fr 1fr', '1fr 1fr', '1fr 1fr', 'repeat(5, auto)']}
 			w="100%"
 			maxW="1160"
-			// align="center"
+			alignItems="center"
 			justifyContent="space-between"
 			mt={['10', '32']}
 			mx="auto"
