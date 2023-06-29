@@ -2,14 +2,15 @@
 
 import { Flex, Heading } from '@chakra-ui/react';
 import Banner from '../components/Banner';
+import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import Menu from '../components/Menu';
 import Separator from '../components/Separator';
 
 export default function Home() {
 	return (
-		<Flex h="100vh" w="100vw" align="flex-start" justify="center">
-			<Flex maxW="1440px" direction="column" align="center">
+		<Flex h="100vh" w="100vw" align="flex-start" justify="center" overflow="auto">
+			<Flex w="100%" maxW="1440px" direction="column" align="center">
 				<Header />
 				<Banner />
 				<Menu />
@@ -20,6 +21,8 @@ export default function Home() {
 					<br />
 					Então escolha seu continente
 				</Heading>
+
+				<Carousel />
 			</Flex>
 		</Flex>
 	);

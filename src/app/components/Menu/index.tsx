@@ -6,7 +6,7 @@ export default function Menu() {
 		<Grid
 			gridTemplateColumns={['1fr 1fr', '1fr 1fr', '1fr 1fr', 'repeat(5, auto)']}
 			w="100%"
-			maxW="1160"
+			maxW="1160px"
 			alignItems="center"
 			justifyContent="space-between"
 			mt={['10', '32']}

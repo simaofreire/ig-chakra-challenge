@@ -1,5 +1,9 @@
 import { ChakraProvider } from '@/providers/ChakraProvider';
+import '@/styles/carousel.scss';
 import { Roboto } from 'next/font/google';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const roboto = Roboto({
 	weight: ['400', '500', '700'],
