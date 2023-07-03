@@ -7,7 +7,7 @@ export default function Banner() {
 		<Flex
 			w="100%"
 			h={['163px', '250px', '250px', '335px']}
-			bgImg="url(./images/Banner.jpg)"
+			bgImg="url(./images/banner.jpg)"
 			bgRepeat="no-repeat"
 			bgSize="cover"
 			bgPosition={['100 20%', '100% 20%', '100% 30%']}

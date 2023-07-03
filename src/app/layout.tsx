@@ -1,5 +1,8 @@
+'use client';
+
 import { ChakraProvider } from '@/providers/ChakraProvider';
 import '@/styles/carousel.scss';
+import { Flex } from '@chakra-ui/react';
 import { Roboto } from 'next/font/google';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -18,7 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="pt-BR">
 			<body className={roboto.className}>
-				<ChakraProvider>{children}</ChakraProvider>
+				<ChakraProvider>
+					<Flex h="100vh" w="100vw" align="flex-start" justify="center" overflowX="hidden">
+						{children}
+					</Flex>
+				</ChakraProvider>
 			</body>
 		</html>
 	);

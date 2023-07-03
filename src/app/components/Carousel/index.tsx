@@ -7,12 +7,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Carousel() {
 	const continentsData = [
-		{ name: 'América do Norte', description: 'O continente mais antigo.' },
-		{ name: 'América do Sul', description: 'O continente mais antigo.' },
-		{ name: 'Ásia', description: 'O continente mais antigo.' },
-		{ name: 'África', description: 'O continente mais antigo.' },
-		{ name: 'Europa', description: 'O continente mais antigo.' },
-		{ name: 'Oceania', description: 'O continente mais antigo.' }
+		{ name: 'América do Norte', description: 'O continente mais antigo.', url: 'americadonorte' },
+		{ name: 'América do Sul', description: 'O continente mais antigo.', url: 'americadosul' },
+		{ name: 'Ásia', description: 'O continente mais antigo.', url: 'asia' },
+		{ name: 'África', description: 'O continente mais antigo.', url: 'africa' },
+		{ name: 'Europa', description: 'O continente mais antigo.', url: 'europe' },
+		{ name: 'Oceania', description: 'O continente mais antigo.', url: 'oceania' }
 	];
 
 	return (
@@ -24,7 +24,7 @@ export default function Carousel() {
 				pagination={{ clickable: true }}
 				autoplay={{ delay: 3000 }}
 			>
-				{continentsData.map(({ name, description }) => (
+				{continentsData.map(({ name, description, url }) => (
 					<SwiperSlide key={name}>
 						<Flex
 							w="100%"
@@ -32,21 +32,26 @@ export default function Carousel() {
 							align="center"
 							justify="center"
 							direction="column"
-							bgImg="url(./images/europe.png)"
+							bgImg={`url(./images/${url}.jpg)`}
 							bgPos="center"
 							bgSize="cover"
 							bgRepeat="no-repeat"
 							textAlign="center"
 						>
-							<Link href="/continent" legacyBehavior>
-								<a>
-									<Heading fontSize={['3xl', '4xl', '5xl']} color="gray.100" fontWeight="bold">
-										{name}
-									</Heading>
+							<Link href={`/continent/${url}`}>
+								<Heading
+									fontSize={['3xl', '4xl', '5xl']}
+									color="gray.100"
+									fontWeight="bold"
+									cursor="pointer"
+									transition="0.3s ease-in"
+									_hover={{ textDecor: 'underline' }}
+								>
+									{name}
 									<Text fontWeight="bold" color="gray.300" fontSize={['0.8rem', '1xl', '2xl']} mt={['2', '4']}>
 										{description}
 									</Text>
-								</a>
+								</Heading>
 							</Link>
 						</Flex>
 					</SwiperSlide>
